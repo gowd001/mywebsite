@@ -2,69 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to DevOps Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to DevOps World</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 text-white min-h-screen flex flex-col justify-center items-center font-sans">
+
+  <!-- Hero Section -->
+  <div class="text-center px-4">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4">
+      🚀 Welcome to <span class="text-blue-400">DevOps World</span>
+    </h1>
+    <p class="text-lg text-gray-300 mb-8">We will learn all essential DevOps tools and concepts together!</p>
+
+    <!-- Tool Buttons -->
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="tool-button">🐙 Git</div>
+      <div class="tool-button">🐳 Docker</div>
+      <div class="tool-button">☸️ Kubernetes</div>
+      <div class="tool-button">🧰 Jenkins</div>
+      <div class="tool-button">📦 Ansible</div>
+      <div class="tool-button">🌍 Terraform</div>
+      <div class="tool-button">📊 Prometheus</div>
+      <div class="tool-button">📈 Grafana</div>
+      <div class="tool-button">☁️ AWS</div>
+      <div class="tool-button">🛳️ Helm</div>
+    </div>
+  </div>
+
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.2em;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 2em;
-    }
-
-    .tools {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1em;
-    }
-
-    .tool-box {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 1em 2em;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      font-size: 1em;
-      transition: transform 0.2s ease;
-    }
-
-    .tool-box:hover {
-      transform: scale(1.05);
-      background-color: rgba(255, 255, 255, 0.15);
+    .tool-button {
+      @apply px-4 py-2 bg-white bg-opacity-10 rounded-xl shadow-md hover:bg-opacity-20 transition-all duration-300 cursor-pointer;
     }
   </style>
-</head>
-<body>
-  <h1>🚀 Welcome to DevOps World</h1>
-  <p>We will learn all essential DevOps tools and concepts together!</p>
 
-  <div class="tools">
-    <div class="tool-box">Git</div>
-    <div class="tool-box">Docker</div>
-    <div class="tool-box">Kubernetes</div>
-    <div class="tool-box">Jenkins</div>
-    <div class="tool-box">Ansible</div>
-    <div class="tool-box">Terraform</div>
-    <div class="tool-box">Prometheus</div>
-    <div class="tool-box">Grafana</div>
-    <div class="tool-box">AWS</div>
-    <div class="tool-box">Helm</div>
-  </div>
-</
+</body>
+</html>
