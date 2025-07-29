@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Git Guide - DevOps World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1e1e2f, #252542);
+      color: #f1f1f1;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #ff6b81;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      border-bottom: 2px solid #666;
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      color: #61dafb;
+    }
+    pre {
+      background: #2d2d3d;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      color: #00e1ff;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 Git Guide</h1>
+
+  <!-- Your 12 Git topics here (Already Provided) -->
+
+  <!-- Append Git Introduction & Version Control Concepts -->
+
+  <div class="section">
+    <h2>🔍 What is Version Control?</h2>
+    <p><strong>Definition:</strong> Version Control is a system that records changes to files over time so you can recall specific versions later.</p>
+    <p><strong>Use Case:</strong> Used in software development to collaborate, track changes, undo errors, and manage code across environments.</p>
+    <p><strong>Key Features:</strong></p>
+    <ul>
+      <li>Track history of code files</li>
+      <li>Collaborate across teams</li>
+      <li>Revert to previous versions</li>
+      <li>Handle conflict resolution</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>📂 Types of Version Control Systems</h2>
+
+    <h3>1. Local Version Control</h3>
+    <p>Each user stores file versions on their local machine using tools like RCS. Simple but not ideal for collaboration.</p>
+
+    <h3>2. Centralized Version Control System (CVCS)</h3>
+    <p><strong>Definition:</strong> All files and version history are stored in a central server. Users pull/push changes to/from that server.</p>
+    <p><strong>Examples:</strong> Subversion (SVN), Perforce, CVS</p>
+    <pre><code>
+Pros:
+- Easy to manage for small teams
+- Centralized backup
+
+Cons:
+- Single point of failure
+- Limited offline access
+    </code></pre>
+
+    <h3>3. Distributed Version Control System (DVCS)</h3>
+    <p><strong>Definition:</strong> Every user has a full copy of the repository including history. Changes are shared via pull/push.</p>
+    <p><strong>Examples:</strong> Git, Mercurial, Bazaar</p>
+    <pre><code>
+Pros:
+- Full history available offline
+- Faster operations
+- Branching and merging is easier
+
+Cons:
+- Slightly higher learning curve
+    </code></pre>
+  </div>
+
+  <div class="section">
+    <h2>🐙 What is Git?</h2>
+    <p><strong>Git</strong> is a free, open-source, distributed version control system created by Linus Torvalds in 2005.</p>
+    <p>It is designed for speed, efficiency, and collaboration, especially in large-scale software development.</p>
+
+    <p><strong>Why Git?</strong></p>
+    <ul>
+      <li>Distributed architecture (no central server needed)</li>
+      <li>Lightweight branching and merging</li>
+      <li>Efficient file tracking and snapshots</li>
+      <li>Massive community support and tooling (GitHub, GitLab, Bitbucket)</li>
+    </ul>
+
+    <h3>Git Workflow (Basic Lifecycle)</h3>
+    <pre><code>
+Working Directory → Staging Area → Local Repository → Remote Repository
+    </code></pre>
+
+    <h3>Real-World Use Cases</h3>
+    <ul>
+      <li>Software development and CI/CD pipelines</li>
+      <li>Configuration management (DevOps, IaC)</li>
+      <li>Content versioning (Docs, Blogs, etc.)</li>
+    </ul>
+  </div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git Guide - DevOps World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #1e1e2f, #252542);
+      color: #f1f1f1;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #ff6b81;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      border-bottom: 2px solid #666;
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      color: #61dafb;
+    }
+    pre {
+      background: #2d2d3d;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      color: #00e1ff;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- <h1>🚀 Git Guide</h1> -->
+
+  <div class="section">
+    <h2>1. Configuring Git</h2>
+    <p><strong>Purpose:</strong> Define who you are in the Git environment and control how Git behaves for you.</p>
+    <p><strong>Use Case:</strong> Essential before you start committing to ensure your identity is linked to your work and to set up preferences like your editor or merge tool.</p>
+    <pre><code>git --version
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+git config --local user.name "Your Name"
+git config --local user.email "your@email.com"
+git config --list
+git config --global --remove-section user
+git config --local --remove-section user</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>2. Initializing a Git Repository</h2>
+    <p><strong>Purpose:</strong> Begin version control in a directory so Git can start tracking changes.</p>
+    <p><strong>Use Case:</strong> Use this when you're starting a new project or want to enable Git tracking in an existing project folder.</p>
+    <pre><code>git init
+ls -a
+git status</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>3. Adding Changes to Staging</h2>
+    <p><strong>Purpose:</strong> Move files from your working directory into the staging area for the next commit.</p>
+    <p><strong>Use Case:</strong> Stage specific or all changes before committing to keep your commits clean and organized.</p>
+    <pre><code>git add filename
+git add .
+git status</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>4. Committing Changes</h2>
+    <p><strong>Purpose:</strong> Save a snapshot of your staged changes to the local repository history.</p>
+    <p><strong>Use Case:</strong> After staging your changes, committing helps you keep track of progress and collaborate effectively.</p>
+    <pre><code>git commit -m "Commit message"
+git commit
+git commit -am "Commit message"
+git commit --amend</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>5. Viewing Commit History</h2>
+    <p><strong>Purpose:</strong> Review changes made over time, who made them, and how the project has evolved.</p>
+    <p><strong>Use Case:</strong> Helpful when debugging, auditing changes, or understanding feature evolution and collaboration history.</p>
+    <pre><code>git log
+git log --oneline
+git log --graph
+git show &lt;commit_hash&gt;</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>6. Branching</h2>
+    <p><strong>Purpose:</strong> Create isolated environments to work on different features, bug fixes, or experiments without affecting main code.</p>
+    <p><strong>Use Case:</strong> Essential for managing development workflows and keeping changes organized by task or feature.</p>
+    <pre><code>git branch
+git branch new_branch
+git switch new_branch
+git checkout new_branch
+git checkout -b feature
+git branch -m new_name
+git branch -d feature
+git branch -D feature</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>7. Merging</h2>
+    <p><strong>Purpose:</strong> Combine the contents of one branch into another, usually integrating features into main development.</p>
+    <p><strong>Use Case:</strong> Use when a feature branch is complete and needs to be merged into main or another development branch.</p>
+    <pre><code>git merge feature
+git merge --abort
+git rebase main
+git rebase -i main</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>8. Stashing</h2>
+    <p><strong>Purpose:</strong> Temporarily store changes that you’re not ready to commit so you can switch contexts safely.</p>
+    <p><strong>Use Case:</strong> When you're mid-task but need to quickly change branches or fix something urgent.</p>
+    <pre><code>git stash
+git stash list
+git stash apply
+git stash pop
+git stash clear</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>9. Resetting Changes</h2>
+    <p><strong>Purpose:</strong> Revert changes in your working directory, staging area, or commit history depending on mode.</p>
+    <p><strong>Use Case:</strong> Useful for undoing mistakes or cleaning up your commit history before pushing to remote.</p>
+    <pre><code>git reset commit_hash
+git reset --soft commit_hash
+git reset --mixed commit_hash
+git reset --hard commit_hash</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>10. Checking Differences</h2>
+    <p><strong>Purpose:</strong> Compare changes between working directory, staging area, and last commits to see what has changed.</p>
+    <p><strong>Use Case:</strong> Ideal for reviewing before staging or committing, and also during conflict resolution in merges.</p>
+    <pre><code>git diff
+git diff --staged
+git diff HEAD</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>11. Deleting Files</h2>
+    <p><strong>Purpose:</strong> Remove files from version control and optionally from the file system.</p>
+    <p><strong>Use Case:</strong> Helps clean up the repository by removing unnecessary or outdated files while keeping history clean.</p>
+    <pre><code>git rm filename
+git rm --cached filename</code></pre>
+  </div>
+
+  <div class="section">
+    <h2>12. Remote Repositories</h2>
+    <p><strong>Purpose:</strong> Connect your local repository to remotes like GitHub, GitLab, or Bitbucket to collaborate and store code in the cloud.</p>
+    <p><strong>Use Case:</strong> Enables team collaboration, centralized backups, CI/CD integration, and easy code sharing across environments.</p>
+    <pre><code>git remote add origin &lt;url&gt;
+git push origin main
+git pull origin main
+git fetch</code></pre>
+  </div>
+<footer style="text-align: center; margin-top: 4rem; font-size: 0.9rem; color: #888;">
+  &copy; 2025 Rakesh Gowd Rajulapati. All rights reserved.
+</footer>
+</body>
+</html>

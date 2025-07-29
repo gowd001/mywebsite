@@ -2,69 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to DevOps Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps World</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.2em;
-    }
-
-    p {
-      font-size: 1.2em;
-      margin-bottom: 2em;
-    }
-
-    .tools {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1em;
-    }
-
-    .tool-box {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 1em 2em;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      font-size: 1em;
-      transition: transform 0.2s ease;
-    }
-
-    .tool-box:hover {
-      transform: scale(1.05);
-      background-color: rgba(255, 255, 255, 0.15);
+    .fade-up {
+      animation: fadeIn 1s ease-out forwards;
     }
   </style>
 </head>
-<body>
-  <h1>🚀 Welcome to DevOps World</h1>
-  <p>We will learn all essential DevOps tools and concepts together!</p>
 
-  <div class="tools">
-    <div class="tool-box">Git</div>
-    <div class="tool-box">Docker</div>
-    <div class="tool-box">Kubernetes</div>
-    <div class="tool-box">Jenkins</div>
-    <div class="tool-box">Ansible</div>
-    <div class="tool-box">Terraform</div>
-    <div class="tool-box">Prometheus</div>
-    <div class="tool-box">Grafana</div>
-    <div class="tool-box">AWS</div>
-    <div class="tool-box">Helm</div>
+<body class="bg-gradient-to-br from-gray-900 via-indigo-900 to-black min-h-screen flex items-center justify-center text-white font-sans">
+  <div class="max-w-7xl w-full text-center px-4 py-10 fade-up">
+    <h1 class="text-3xl md:text-5xl font-extrabold mb-4">
+      🚀 Welcome to <span class="text-indigo-400">DevOps World</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300 mt-2 leading-relaxed">
+      DevOps is a journey of tools — every click, every config, every command adds to your power.<br />
+      The more you explore, the sharper you become — and the learning never ends.
+    </p>
+
+    <!-- Tool Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 justify-center mt-10">
+      <a href="linux.html" class="tool">🐧 Linux</a>
+      <a href="git.html" class="tool">🐙 Git</a>
+      <a href="github.html" class="tool">💻 GitHub</a>
+      <a href="maven.html" class="tool">📦 Maven</a>
+      <a href="apache.html" class="tool">🌐 Apache</a>
+      <a href="sonarqube.html" class="tool">🧪 SonarQube</a>
+      <a href="jenkins.html" class="tool">🧰 Jenkins</a>
+      <a href="aws.html" class="tool">☁️ AWS</a>
+      <a href="terraform.html" class="tool">🌍 Terraform</a>
+      <a href="ansible.html" class="tool">📦 Ansible</a>
+      <a href="docker.html" class="tool">🐳 Docker</a>
+      <a href="kubernetes.html" class="tool">☸️ Kubernetes</a>
+      <a href="helm.html" class="tool">🛳️ Helm</a>
+      <a href="prometheus.html" class="tool">📊 Prometheus</a>
+      <a href="grafana.html" class="tool">📈 Grafana</a>
+      <a href="elk.html" class="tool">🧪 ELK Stack</a>
+      <a href="jira.html" class="tool">📋 Jira</a>
+      <a href="confluence.html" class="tool">📘 Confluence</a>
+      <a href="crowd.html" class="tool">👥 Crowd</a>
+      <a href="sql.html" class="tool">🗄️ SQL</a>
+    </div>
   </div>
-</
+
+  <!-- JavaScript for highlighting -->
+  <script>
+    const tools = document.querySelectorAll('.tool');
+    tools.forEach(tool => {
+      tool.classList.add(
+        "bg-white", "bg-opacity-10", "p-4", "text-center", "rounded-xl",
+        "shadow-md", "text-white", "text-sm", "font-medium", "transition",
+        "duration-300", "transform", "cursor-pointer", "hover:bg-indigo-600",
+        "hover:bg-opacity-60", "hover:scale-105"
+      );
+
+      tool.addEventListener('click', () => {
+        tools.forEach(t => t.classList.remove('bg-indigo-600', 'bg-opacity-90', 'scale-105'));
+        tool.classList.add('bg-indigo-600', 'bg-opacity-90', 'scale-105');
+      });
+    });
+  </script>
+  
+</body>
+</html>
